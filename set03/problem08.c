@@ -33,19 +33,19 @@ void find_n_distance(int n, Line *l);
 void find_perimeter(Polygon* p);
 void output(Polygon p);
 
-int input_n(){
-  int n;
-  printf("Enter the number of sides of polygon");
-  scanf("%d",&n);
-  return n;
-}
-
 int main(){
   Polygon p;
   input_polygon(&p);
   find_perimeter(&p);
   output(p);
   return 0;
+}
+
+int input_n(){
+  int n;
+  printf("Enter the number of sides of polygon");
+  scanf("%d",&n);
+  return n;
 }
 
 Line input_line(int n){
