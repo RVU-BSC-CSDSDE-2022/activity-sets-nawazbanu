@@ -3,22 +3,17 @@ Formula is (a+b)/2*h */
 
 #include<stdio.h>
 
-void input();
+void input(int *a, int *b, int *h);
 //int find_area(int a,int b,int area); // pass by value
-void find_area(int a,int b,int *area);  
+void find_area(int a,int b,int h,int *area);  
 void output(int area);
 
-void input(){
-  int a,b,h;
-
-void input(){
-  int a,b,h;
-  printf("Enter a,b,h");
-  scanf("%d %d %d",&a,&b,&h);
+void input(int *a,int *b,int *h){
+  printf("Enter a,b,h \n");
+  scanf("%d %d %d",a,b,h);
 }
 
-void find_area(int a,int b,int *area){
-  int h;
+void find_area(int a,int b,int h,int *area){
   *area = ((a + b) / 2 )* h ;
 }
 
@@ -27,9 +22,9 @@ void output(int area){
 }
 
 int main(){
-  int a,b,area;
-  input(a,b);
-  find_area(a,b,&area);
+  int a,b,h,area;
+  input(&a,&b,&h);
+  find_area(a,b,h,&area);
   output(area);
   return 0;
 }
