@@ -2,8 +2,8 @@
 #include<stdio.h>
 
 int input();
-void is_sum();
-void output(int sum);
+int is_sum(int n);
+void output(int n,int sum);
 
 int input(){
   int n;
@@ -12,21 +12,22 @@ int input(){
   return n;
 }
 
-void is_sum(){
-  int sum = 0,n;
-  for(int i = 1;i >= n;i++){
+int is_sum(int n){
+  int sum = 0;
+  for(int i = 1;i <= n;i++){
     sum += (i * i);
   }
+  return sum;
 }
 
-void output(int sum){
-  printf("Sum of squares are %d",sum);
+void output(int n,int sum){
+  printf("Sum of %d squares numbers are %d",n,sum);
 }
 
 int main(){
   int n,sum;
   n = input();
-  is_sum();
-  output(sum);
+  sum = is_sum(n);
+  output(n,sum);
   return 0;
 }
