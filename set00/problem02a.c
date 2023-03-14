@@ -33,9 +33,9 @@ int sum_of_squares(int n,int a[n]){
 void output_result(int n,int a[n],int result){
   int i;
   for(i = 0;i < n;i++){
-    printf(" %d+",a[i]);
+    printf("%d ",a[i]);
   }
-  printf("%d is %d \n",a[i],result);
+  printf("\nsum is %d \n",result);
 }
 
 int main(){
