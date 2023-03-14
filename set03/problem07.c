@@ -23,7 +23,7 @@ Point input_point(){
   Point p;
   printf("Enter the  first and second coordinate");
   scanf("%f %f",&p.x,&p.y);
-  return P;
+  return p;
 }
 
 Line input_line(){
@@ -34,11 +34,11 @@ Line input_line(){
 }
 
 void find_length(Line *l){
-  l -> distance = sqrt(pow((l->p2.x - l->p1.x),2) + ((l->p2.y - l->p1.y),2));
+  l -> distance = sqrt(pow((l->p2.x - l->p1.x),2) + pow((l->p2.y - l->p1.y),2));
  }
 
 void output(Line l){
-  printf("The distance between the points (%f , %f) and (%f , %f) is %f",p1.x.l,p1.y.l,p2.x.l,p2.y.l,l.distance);
+  printf("The distance between the points (%f , %f) and (%f , %f) is %f",l.p1.x,l.p1.y,l.p2.x,l.p2.y,l.distance);
 }
 
 int main(){

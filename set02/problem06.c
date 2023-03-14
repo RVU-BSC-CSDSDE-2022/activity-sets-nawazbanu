@@ -15,12 +15,11 @@ void input_string(char *a){
 }
 
 void str_reverse(char *str, char *rev_str){
-int begin,end,count = 0;
-  while(str[count] != '\0')
-  {
-    count++;
-    end = count - 1;
-  }
+int begin,end,count;
+
+for(count = 0;str[count] != '\0';count++);
+end = count - 1;
+  
   for(begin = 0;begin < count;begin++){
     rev_str[end] = str[begin];
     end--;

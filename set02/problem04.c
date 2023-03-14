@@ -2,6 +2,7 @@
 // input 1 2 7 8 12 o/p : 20
 
 #include<stdio.h>
+#include<math.h>
 
 int input_array_size();
 void input_array(int n, int a[n]); 
@@ -27,12 +28,12 @@ int sum_composite_numbers(int n, int a[n]){
   int result = 0;
   for(int i = 0;i < n;i++){
     count = 0;
-    for(int j = 1;j <= a[i];j++){
+    for(int j = 2;j <= sqrt(a[i]);j++){
     if(a[i] % j == 0){
       count++;
       }
     }
-   if(count > 2){
+   if(count >= 2){
      result = result + a[i];
    }
     }
