@@ -1,0 +1,59 @@
+1] Write a program to find the volume of rasgulla
+Formula = 2 * 3.14 * radius / height
+Function Declarations
+void input(float *radius, float *height);
+float find_volume(float radius, float height);
+void output(float radius,float height,float volume);
+Input
+1 1
+
+Output
+The volume of the rasgulla with radius 1.00 and height 1.00 is 6.18
+
+6. Write a program to capitalise the letter after every fullstop in a given string.
+Function Declarations
+void input_string(char* string);
+void capitalise(char* string);
+void output(char *string);
+Input
+hello.world
+
+Output
+hello.World
+
+7. Write a program to find the sum of the below series
+x - (x^3)/3! + (x^5)/5! - (x^7)/7! + (x^9)/9!...
+Function Declarations
+
+int input_n();
+float find_sum(float x,int n)
+void output(int n,float sum);
+Input
+0.5 5
+
+Output
+The sum is 0.4794
+
+8. Write a program to find the sum of perimeters of n different rasgullas
+Formula: White rasgulla = 2*(radius/height)*pi
+Brown Rasgulla = 2*(height/radius)^2*pi
+
+Function Declarations
+typedef struct rasgulla{
+float radius,height;
+char color;
+} Rasgulla;
+
+int input_num_of_ras();
+float find_perimeter(Rasgulla r);
+float find_n_perimeter(int n,Rasgulla r[n]);
+void output(int n, Rasgulla r[n], float perimeter);
+Input
+Enter the number of Rasgulla:
+2
+Enter the coordinates of radius, height, colour for Rasagulla 1:
+1 1 b
+Enter the coordinates of radius, height, colour for Rasagulla 2:
+1 1 w
+Output
+The sum of perimeters is 12.56

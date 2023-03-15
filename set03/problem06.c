@@ -20,9 +20,9 @@ int main(){
   }
 
 void input_string(char* a, char* b){
-  printf("Enter the a string : \n");
+  printf("Enter the a string ");
   scanf("%s",a);
-  printf("Enter the b substring : \n");
+  printf("Enter the b substring");
   scanf("%s",b);
 }
 

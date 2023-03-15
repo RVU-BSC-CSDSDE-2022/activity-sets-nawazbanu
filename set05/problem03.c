@@ -13,29 +13,38 @@ struct camel {
 typedef struct camel Camel;
 
 Camel input();
-//float find_weight(Camel c);  //pass by value
-void find_weight(Camel *c); //passing address variable
+float find_weight(Camel c);  //pass by value
+// void find_weight(Camel *c); //passing address variable
 void output(Camel c);
 
 int main(){
   Camel c;
+  float weight;
   c = input();
-  find_weight(&c);
+ // find_weight(&c);
+  c.weight = find_weight(c);
   output(c);
   return 0;
 }
 
 Camel input(){
   Camel c;
-  printf("Enter radius , height and weight \n");
+  printf("Enter radius , height and length \n");
   scanf("%f %f %f",&c.radius,&c.height,&c.length);
   return c;
 }
 
-void find_weight(Camel *c){
-  float pi = 3.1415,radius,height,length;
-  float weight = pi * pow(radius , 3) * sqrt (height * length);
+/* void find_weight(Camel *c){
+  float pi = 3.1415;
+  c ->  weight = pi * pow(c -> radius , 3) * sqrt (c -> height * c -> length); 
+} */
+
+float find_weight(Camel c){
+  float pi = 3.1415 , weight;
+  return pi * pow ( c.radius,3) * sqrt ( c.height *  c.length);
+  return weight;
 }
+
 
 void output(Camel c){
   printf("The weight of the camel with radius %0.1f,height %0.1f,length %0.1f is %0.4f ",c.radius,c.height,c.length,c.weight);
