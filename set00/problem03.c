@@ -23,12 +23,12 @@ void input(int num,int den,int n){
 
 float sum_of_fractions(int num,int den,int n){
   float sum = 0;
-  /*for(int i = 0;i < n;i++){
-    printf("Enter the num and den \n");
-    scanf("%f %f",&num,&den);*/
+  for(int i = 1;i <= n;i++){
+    den = 2 * i;
     if(den % 2 == 0){
       sum += (num/den);
     
+   }
   }
   return sum;
 }
