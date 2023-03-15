@@ -25,12 +25,17 @@ float find_n_perimeter(int n,Rasgulla r[n]);
 void output(int n, Rasgulla r[n], float perimeter);
 
 int main(){
-  Rasgulla r,r[n];
-  int n;
+  int i,n;
   float perimeter;
   n = input_num_of_ras();
-  
-  
+  Rasgulla r[n];
+  for(i = 0; i < n;i++){
+  printf("Enter the coordinates of radius,height and color of rasagulla %d \n",i + 1);
+   scanf("%f %f %c",&r[i].radius,&r[i].height,&r[i].color);
+  }
+  perimeter = find_n_perimeter(n,r);
+  output(n,r,perimeter);
+  return 0;
 }
 int input_num_of_ras(){
   int n;
@@ -40,27 +45,26 @@ int input_num_of_ras(){
 }
 
 float find_perimeter(Rasgulla r){
-  int n;
-  for(int i = 0;i <= n;i++){
-    printf("Enter the coordinates of radius,height,colour for Rasagulla \n");
-    scanf("%f",&n);
-  }
+  float perimeter;
+    if(r.color == 'w'){
+      perimeter = 2*(r.radius/r.height)*M_PI;
+    }
+    else if(r.color == 'b'){
+      perimeter = 2*pow((r.height/r.radius),2)*M_PI;
+    
+    }
   return perimeter;
 }
 
 float find_n_perimeter(int n,Rasgulla r[n]){
-  float perimeter;
-  for(int i = 0; i < n;i++){
-  find_perimeter(r,r[n]);
-  if(rasgulla == white){
-    return 2*(radius/height)*pi;
+  float perimeter = 0;
+  int i;
+  for(i = 0; i < n;i++){
+    perimeter = perimeter + find_perimeter(r[i]);
   }
-    else if(rasgulla == brown){
-      return 2*(height/radius)^2*pi;
-    }
-    return perimeter;
+  return perimeter;
 }
 
 void output(int n, Rasgulla r[n], float perimeter){
-  printf("The sum of perimeters %f",perimeter);
+  printf("The sum of perimeters %.2f",perimeter);
 }
