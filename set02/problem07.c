@@ -22,7 +22,6 @@ Triangle input_triangle(){
   }  
 
 void find_area(Triangle *t){
-  float area;
   t -> area = (0.5) * (t -> base)*(t -> altitude);
 }
 

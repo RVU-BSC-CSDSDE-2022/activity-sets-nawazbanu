@@ -4,7 +4,7 @@
 //8 
 
 #include<stdio.h>
-
+#include<math.h>
 
 int input_number();
 int is_composite(int n);
@@ -27,15 +27,14 @@ int input_number(){
 
 int is_composite(int n){
   int i,result;
-  for(i = 1; i <= n;i++){
+  for(i = 2;i <= sqrt(n);i++){
     if(n % i == 0)
-      result++;            // result = count
+  return 1;
   }
-  return result;
-  }
-  
+}
+
 void output(int n, int result){
-  if(result > 2)
+  if(result == 1)
   {
     printf(" %d is composite number",n);
     }
