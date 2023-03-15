@@ -25,27 +25,17 @@ int input(int x){
 }
 
 float borga_X(int x){
-  float fact,pow,y,borga;
-  int i;
-  fact = 1.0;
-  pow = 1.0;
-  y = 0.0;
-  borga = 0.0;
-  i = 1;
-  while(i){
-    y = pow/fact;
-    fact = fact * (i * 2)  (i * 2 + 1);
-    pow = pow * x;
+  float result;
+  int i = 1;
+  float term = 1;
+  while(term > 0.000001){
+    term = (float) pow(x,i) / (i * 2 + 1);
+    result += term;
     i++;
-    borga = y + borga;
-    if(y < 0.000001){
-      break;
-    }
   }
-  return borga;
+  return result;
 }
 
-
 void output(int x, float result){
-  printf("borga %d = %0.01f",x,result);
+  printf("borga %d = %2.61f",x,result);
 }
