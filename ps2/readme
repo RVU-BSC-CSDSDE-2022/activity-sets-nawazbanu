@@ -1,0 +1,53 @@
+1. Write a program to find the weight of  a kalakand
+Formula = 0.8*sqrt(quantity_of_milk)  + quantity_of_ sugar/4 + 0.8 * wight_of_dry_fruits. 
+Function Declarations
+
+
+Input
+1 1 1
+
+
+Output
+The volume of the kalakand with quantity_of_milk 1.00, qunatity_of_sugar 1.00 and weight_of_dry_fruits 1.00 is 1.85
+
+
+
+2.Write a program to remove all the vowels from a given string
+Function Declarations
+Input
+helloworld
+
+
+Output
+hllwrld
+
+3.Write a program to find the sum of the below series
+	1 - (x^2)/2! + (x^4)/4! - (x^6)/6! + (x^8)/8!...
+Function Declarations
+
+
+Input
+0.5 5
+
+
+Output
+The sum is 0.8775
+
+
+
+4.Write a program to find the sum of perimeters of n different kalakand
+Formula: weight of dry fruits > 5:
+perimeter = quantity_of_milk^quantity_of_sugar
+    weight of dry fruits <= 5:
+	perimeter = quantity_of_milk+quantity_of_sugar
+Input
+Enter the number of kalakands:
+2
+Enter the quantity_of_milk, quantity_of_sugar, weight_of_dry_fruits for kalakand 1:
+1 1 6
+Enter the quantity_of_milk, quantity_of_sugar, weight_of_dry_fruits for kalakand 2:
+1 1 4
+Output
+The sum of perimeters is 3.00
+
+

@@ -30,7 +30,7 @@ int input_n(){
 
 float input_x(){
     float x;
-    printf("Enter \n");
+    printf("Enter x \n");
     scanf("%f",&x);
     return x;
 }
@@ -39,8 +39,8 @@ float find_sum(float x,int n){
   float term = x;
   float sum = 0.0;
   for(int i = 1;i <= n;i++){
-    sum+=term;
-    term = term * (x * x) * (-1) / ((2 * i + 1) * (2 * i));
+    sum += term;
+    term = term * (x * x) * (-1) / (2 * i + 1) * (2 * i);
   }
   return sum;
 }
