@@ -64,7 +64,7 @@ float find_weight(Kalakand k){
     return k.quantity_of_milk + k.quantity_of_sugar;
     }
   else{
-   return pow((k.quantity_of_milk),k.quantity_of_sugar);
+   return (pow(k.quantity_of_milk,k.quantity_of_sugar));
   }
   return weight;
   }
