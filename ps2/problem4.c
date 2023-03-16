@@ -60,14 +60,14 @@ void input_n_kalakand(int n, Kalakand k[n]){
 
 float find_weight(Kalakand k){
   float weight;
-  if(weight <= 5){
-    return k.quantity_of_milk + k.quantity_of_sugar;
+  if(k.weight_of_dry_fruits > 5){
+   weight = (pow(k.quantity_of_milk,k.quantity_of_sugar));
     }
   else{
-   return (pow(k.quantity_of_milk,k.quantity_of_sugar));
-  }
+    weight = k.quantity_of_milk + k.quantity_of_sugar;
+    }
   return weight;
-  }
+}
 
 float find_n_weight(int n,Kalakand k[n]){
   float sum = 0;
