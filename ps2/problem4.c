@@ -29,11 +29,10 @@ void output(int n, Kalakand k[n], float weight);
 
 int main(){
   int n;
-  float weight;
-  Kalakand k[n];
   n = input_num_of_kalakand();
+  Kalakand k[n];
   input_n_kalakand(n,k);
-  weight = find_n_weight(n,k);
+  float weight = find_n_weight(n,k);
   output(n,k,weight);
   return 0;
 }
@@ -71,13 +70,13 @@ float find_weight(Kalakand k){
   }
 
 float find_n_weight(int n,Kalakand k[n]){
-  float weight = 0;
+  float sum = 0;
   for(int i = 0; i < n;i++){
-    weight = weight + find_weight(k[i]);  
+    sum += find_weight(k[i]);  
   }
-  return weight;
+  return sum;
 }
 
 void output(int n, Kalakand k[n], float weight){
-  printf("The sum of weights are %f",weight);
+  printf("The sum of weights are %.2f",weight);
 }
