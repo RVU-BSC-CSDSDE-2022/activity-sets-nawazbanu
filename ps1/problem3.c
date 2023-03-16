@@ -30,7 +30,7 @@ int input_n(){
 
 float input_x(){
     float x;
-    printf("Enter x\n");
+    printf("Enter \n");
     scanf("%f",&x);
     return x;
 }
