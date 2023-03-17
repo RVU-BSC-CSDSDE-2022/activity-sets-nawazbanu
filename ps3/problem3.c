@@ -12,7 +12,7 @@ int find_sum(int n);
 void output(int n,int term);
 
 int main(){
-  int n,term,sum;
+  int n,term;
   n = input_n();
   term = find_sum(n);
   output(n,term);
@@ -28,13 +28,13 @@ int input_n(){
 
 int find_sum(int n){
   int i;
-  int a = 0,b = 1,sum = 0;
-    for(i = 1; i<= n;i++){
-    sum = a + b;
+  int a = 0,b = 1,term;
+    for(i = 1;i<= n;i++){
+    term = a + b;
     a = b;
-    b = sum;
+    b = term;
     }
-  return sum;
+  return term;
 }
 
 void output(int n,int term){
