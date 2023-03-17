@@ -1,0 +1,60 @@
+1. Write a program to find the weight of  a jalebi
+Formula = 0.8*sqrt(amount_of_sugar) + fourth_root(amount_of_color) + 0.8 *amount_of_flour. 
+Function Declarations
+
+
+Input
+1 1 1
+
+
+Output
+The weight of the jalebi with amount_of_sugar 1.00, amount_of_color 1.00 and amount_of_flour 1.00 is 2.6
+
+
+
+2.Write a program to remove all the adjacent duplicate characters from a string
+Function Declarations
+
+
+Input
+helloworld
+
+
+Output
+heloworld
+Input
+helllo
+Output
+helo
+
+
+
+3. Write a program to find the nth term of the below  dingdong series
+	0,1,1,2,3,5,...
+Function Declarations
+
+
+Input
+7
+
+
+Output
+The nth term is 8
+
+
+4. 4.Write a program to find the sum of volumes of n different jalebis
+Formula: type_of_jalebi == "paneer":
+volume = amount_of_sugar*amount_of_color*amount_of_flour
+    type_of_jalebi == "besan":
+	volume = amount_of_sugar+amount_of_color+amount_of_flour
+Enter 0 for paneer as input
+Enter 1 for besan as input
+Input
+Enter the number of jalebis:
+2
+Enter the amount_of_sugar, amount_of_color, amount_of_flour, type for jalebi 1:
+1 1 6 0
+Enter the amount_of_sugar, amount_of_color, amount_of_flour, type for kalakand 2:
+1 1 4 1
+Output
+The sum of volume is  12.0
