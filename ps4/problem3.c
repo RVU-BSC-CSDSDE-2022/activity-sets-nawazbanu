@@ -43,7 +43,7 @@ int find_sum(float x,int n){
     term = term * x / i;
     sum += term;
   }
-  return sum;
+  return term;
 }
 
 void output(int n,float term){
